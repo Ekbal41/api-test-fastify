@@ -32,5 +32,11 @@ module.exports = async function (fastify, opts) {
     secret: 'myapissupersecret'
   })
 
+  fastify.register(require("@fastify/view"), {
+    engine: {
+      ejs: require("ejs"),
+    },
+  });
+
 
 }
