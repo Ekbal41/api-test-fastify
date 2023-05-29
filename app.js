@@ -36,6 +36,7 @@ const app = async function (fastify, opts) {
     engine: {
       ejs: require("ejs"),
     },
+    root: path.join(__dirname, "templates"),
   });
 };
 
