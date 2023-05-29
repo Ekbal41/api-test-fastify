@@ -1,9 +1,4 @@
-// const { app } = require("./app.js");
-// const myapp = app();
-// Object.defineProperty(exports, "__esModule", {
-//   value: true,
-// });
-// exports["default"] = myapp;
+// https://www.fastify.io/docs/latest/Serverless/
 "use strict";
 
 const Fastify = require("fastify");
@@ -16,7 +11,12 @@ const app = Fastify({
 // Register your application as a normal plugin.
 app.register(import("../app.js"));
 
-export default async (req, res) => {
-    await app.ready();
-    app.server.emit('request', req, res);
-}
+const myapp = async (req, res) => {
+  await app.ready();
+  app.server.emit("request", req, res);
+};
+
+Object.defineProperty(exports, "__esModule", {
+  value: true,
+});
+exports["default"] = myapp;
