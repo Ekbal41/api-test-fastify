@@ -2,7 +2,7 @@
   "rewrites": [
       {
           "source": "/(.*)",
-          "destination": "/ap/index.js"
+          "destination": "/ap/serverless.js"
       }
   ]
 }
