@@ -9,7 +9,8 @@
   "scripts": {
     "test": "tap \"test/**/*.test.js\"",
     "start": "fastify start -l info app.js",
-    "dev": "fastify start -w -l info -P app.js",
+    "dev": " fastify start -w -l info -P app.js",
+    "dev-nodemon": "nodemon app.js",
     "vercel-build": "echo 'Nothing to build'"
   },
   "keywords": [],
@@ -24,7 +25,8 @@
     "ejs": "^3.1.9",
     "fastify": "^4.0.0",
     "fastify-cli": "^5.7.1",
-    "fastify-plugin": "^4.0.0"
+    "fastify-plugin": "^4.0.0",
+    "mongoose": "^7.2.1"
   },
   "devDependencies": {
     "tap": "^16.1.0"

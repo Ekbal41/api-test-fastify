@@ -2,18 +2,28 @@
 
 const path = require("path");
 const AutoLoad = require("@fastify/autoload");
+const mongoose = require("mongoose");
 
 // Pass --options via CLI arguments in command to enable these options.
 module.exports.options = {
-  // logger: true,
   logger: true,
 };
 
+mongoose.connect(
+  "mongodb+srv://asifekbal:asifekbal2023@asifekbal-api.yqo3ivf.mongodb.net/?retryWrites=true&w=majority",
+  {},
+)
+  .then(() => {
+    console.log("MongoDB connected…");
+  })
+  .catch((err) => {
+    console.log(err);
+    process.exit(1);
+  });
+
 const app = async function (fastify, opts) {
   // Place here your custom code!
-
   // Do not touch the following lines
-
   // This loads all plugins defined in plugins
   // those should be support plugins that are reused
   // through your application
