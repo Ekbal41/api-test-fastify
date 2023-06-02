@@ -13,11 +13,19 @@
         justify-content: center;
         align-items: center;
         font-family: Arial, Helvetica, sans-serif;
-        margin-top: 300px;
-
+        margin-top: 200px;
+        flex-direction: column;
       "
     >
-      <h1>welcome to api for asifs portfolio.</h1>
+      <h1>welcome to api for a portfolio.</h1>
+      <h1>Endpoints :</h1>
+      <p>
+        Register :
+        <span>url/user/register?e=[email]&&p=[password]&&n=[name]</span>
+      </p>
+      <p>APi Key : <span>url/user/get-key?e=[email]&&p=[password]</span></p>
+      <p>All Project : <span>url/projects?key=[key]</span></p>
+      <p>Single Project : <span>url/projects?key=[key]&&id=[id]</span></p>
     </div>
   </body>
 </html>
